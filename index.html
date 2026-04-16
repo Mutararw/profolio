@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Ntwari | Software Developer</title>
+    <meta
+      name="description"
+      content="Software Developer. Builder. STEM Innovator. Based in Kigali, Rwanda."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <nav class="nav-pill">
+      <div class="nav-logo" onclick="window.scrollTo(0, 0)">
+        DAVID<span>.</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" data-translate="nav_about">about</a></li>
+        <li><a href="#skills" data-translate="nav_skills">skills</a></li>
+        <li class="dropdown">
+          <span class="dropdown-trigger">projects ▾</span>
+          <div class="dropdown-menu">
+            <a href="#projects">Oracle DB PDB Architecture</a>
+            <a href="#projects">ES6+ E-commerce Platform</a>
+            <a href="#projects">Django Enterprise Backend</a>
+          </div>
+        </li>
+        <li><a href="#career" data-translate="nav_career">career</a></li>
+        <li><a href="#awards">awards</a></li>
+        <li><a href="#contact" data-translate="nav_contact">contact</a></li>
+      </ul>
+      ...
+
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-left: 1rem;
+        "
+      >
+        <div class="dropdown">
+          <button class="nav-dropdown-btn">🌍</button>
+          <div
+            class="dropdown-menu"
+            style="
+              width: 160px;
+              right: 0;
+              left: auto;
+              transform: translateY(10px);
+            "
+          >
+            <a href="#" id="btn-en">🇬🇧 English</a>
+            <a href="#" id="btn-kn">🇷🇼 Kinyarwanda</a>
+            <a href="#" id="btn-fr">🇫🇷 Français</a>
+          </div>
+        </div>
+        <button id="theme-toggle" class="nav-dropdown-btn">🌙</button>
+        <div class="v-badge"><span id="v-count">0</span> views</div>
+        <a href="#contact" class="nav-cta">Say Hello</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section id="hero">
+        <img src="profile.png" alt="David Ntwari" class="profile-img" />
+        <h1 class="hero-name">KAJYOJYI NTWARI DAVID<span>.</span></h1>
+        <p class="hero-bio">
+          Software Engineer. STEM Innovator. Building high-impact solutions with
+          precision and modern logic.
+        </p>
+      </section>
+
+      <section id="about">
+        <span class="eyebrow" data-translate="nav_about">about me</span>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Coming from a solid STEM background in high school, I have
+              developed an analytical mindset that I now apply to my university
+              studies. Currently, I am a second-year student at
+              <span class="yellow-text">AUCA</span>, where I bridge the gap
+              between foundational computer science principles and
+              industry-ready software engineering.
+            </p>
+            <p>
+              My mission is to bridge the gap between complex logic and
+              human-centric design. Whether it's architecting robust
+              <span class="red-text">Django</span> backends or crafting seamless
+              <span class="yellow-text">ES6+</span> interfaces, I focus on
+              precision, performance, and scalability.
+            </p>
+          </div>
+
+          <div class="interest-tags">
+            <span>Software Engineer</span>
+            <span>Full-Stack Developer</span>
+            <span>STEM Advocate</span>
+            <span>Database Architect</span>
+            <span>Chess Player</span>
+            <span>Music Enthusiast</span>
+            <span>Kigali, Rwanda 🇷🇼</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <span class="eyebrow" data-translate="nav_skills"
+          >technical skills</span
+        >
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="tech-stack">
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="HTML5"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>HTML5 & Semantic Web</h4>
+                  <p>
+                    Crafting accessible and SEO-optimized structures that form
+                    the backbone of modern web applications with precision and
+                    standards-compliance.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS3"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>CSS3 & Advanced Styling</h4>
+                  <p>
+                    Building responsive, high-performance layouts using Grid and
+                    Flexbox, with a focus on fluid animations and modern visual
+                    aesthetics.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="ES6+"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>Modern JavaScript (ES6+)</h4>
+                  <p>
+                    Leveraging asynchronous programming, functional patterns,
+                    and advanced DOM manipulation to create interactive,
+                    logic-driven user experiences.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>React Framework</h4>
+                  <p>
+                    Architecting scalable component-based UIs with efficient
+                    state management, specialized in creating seamless Single
+                    Page Applications (SPAs).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend Engineering</h3>
+            <div class="tech-stack">
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>Python Programming</h4>
+                  <p>
+                    Writing clean, efficient code for complex logical
+                    processing, automation scripts, and high-level system
+                    integrations with a focus on readability.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                    alt="Django"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>Django Framework</h4>
+                  <p>
+                    Building robust, secure, and rapid enterprise-level backends
+                    with a comprehensive understanding of the MTV architecture
+                    and RESTful APIs.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node.js"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>Node.js Runtime</h4>
+                  <p>
+                    Developing fast, non-blocking server-side applications and
+                    microservices, utilizing the power of the V8 engine for
+                    high-concurrency environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Database Architecture</h3>
+            <div class="tech-stack">
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                    alt="Oracle"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>Oracle Database 21c</h4>
+                  <p>
+                    Specialized in Container (CDB) and Pluggable (PDB) database
+                    architectures, focusing on enterprise-grade data security
+                    and efficient SQL optimization.
+                  </p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon-wrapper">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    alt="PostgreSQL"
+                  />
+                </div>
+                <div class="tech-info">
+                  <h4>PostgreSQL</h4>
+                  <p>
+                    Designing relational schemas with complex queries and
+                    indexing strategies to ensure high availability and data
+                    integrity for modern applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="career">
+        <span class="eyebrow">experience</span>
+        <div class="career-grid">
+          <div class="card career-card">
+            <span class="eyebrow career-date">2026 - PRESENT</span>
+            <h3 class="career-title">Software Engineering Fellow</h3>
+            <p class="company career-company">
+              A2SV (Africa to Silicon Valley)
+            </p>
+            <p class="career-description">
+              Accepted into the prestigious A2SV program, focusing on advanced
+              algorithms, data structures, and collaborative software
+              development to solve real-world problems.
+            </p>
+          </div>
+          <div class="card career-card">
+            <span class="eyebrow career-date">2024 - 2025</span>
+            <h3 class="career-title">Community Fitness Leader</h3>
+            <p class="company career-company">Gym Rwanda</p>
+            <p class="career-description">
+              Actively participated in community fitness programs, promoting
+              healthy lifestyles and collaborative spirit within the local
+              community.
+            </p>
+          </div>
+          <div class="card career-card">
+            <span class="eyebrow career-date">2024 - 2026</span>
+            <h3 class="career-title">Enterprise Backend Developer</h3>
+            <p class="company career-company" style="color: var(--accent-red)">
+              callebdjango Project
+            </p>
+            <p class="career-description">
+              Developing a robust Django 6.0 backend structure, focusing on
+              scalable user management and high-performance API architectures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <span class="eyebrow">Awards & Achievements</span>
+        <div class="about-content">
+          <div class="card award-card">
+            <h3>
+              Gym Rwanda Certification
+              <span class="verified-badge">VERIFIED</span>
+            </h3>
+            <p class="company">Gym Rwanda</p>
+            <p>Recognition for commitment to community fitness and wellness.</p>
+            <iframe
+              src="gym-certificate.pdf"
+              width="200"
+              height="300"
+              class="award-iframe"
+              title="Gym Rwanda Certification PDF"
+            ></iframe>
+            <a href="gym-certificate.pdf" target="_blank" class="award-link"
+              >View Full Certificate →</a
+            >
+          </div>
+          <div class="card award-card">
+            <h3>UI/UX Beginner Certificate</h3>
+            <p class="company">AUCA</p>
+            <p>
+              Foundational knowledge in user interface and experience design
+              principles.
+            </p>
+            <iframe
+              src="DTP intermediate UX_UI certificate.pdf"
+              width="816"
+              height="1056"
+              class="award-iframe"
+              title="UI/UX Beginner Certificate PDF"
+            ></iframe>
+            <a
+              href="DTP intermediate UX_UI certificate.pdf"
+              target="_blank"
+              class="award-link"
+              >View Full Certificate →</a
+            >
+          </div>
+          <div class="card award-card">
+            <h3>
+              UI/UX Intermediate Certificate
+              <span class="verified-badge">VERIFIED</span>
+            </h3>
+            <p class="company">AUCA</p>
+            <p>
+              Advanced practical application of UI/UX design tools and
+              methodologies.
+            </p>
+            <iframe
+              src="ui-ux-intermediate-certificate.pdf"
+              width="200"
+              height="300"
+              class="award-iframe"
+              title="UI/UX Intermediate Certificate PDF"
+            ></iframe>
+            <a
+              href="ui-ux-intermediate-certificate.pdf"
+              target="_blank"
+              class="award-link"
+              >View Full Certificate →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <span class="eyebrow">featured projects</span>
+        <div class="projects-grid">
+          <div class="card project-card">
+            <h3>Oracle PDB Architecture</h3>
+            <p>
+              Specialized implementation of Oracle 21c Pluggable Databases,
+              utilizing SQL*Plus for precise enterprise data management.
+            </p>
+            <a href="#" style="color: var(--accent-red)">VIEW CASE STUDY →</a>
+          </div>
+          <div class="card project-card">
+            <h3>ES6+ Search Engine</h3>
+            <p>
+              A high-performance search algorithm built with modern JavaScript,
+              optimized for large datasets and instant feedback.
+            </p>
+            <a href="#" style="color: var(--accent-yellow)">EXPLORE CODE →</a>
+          </div>
+          <div class="card project-card">
+            <h3>Interactive AI Chatbot</h3>
+            <p>
+              A responsive and intelligent chatbot interface built with modern
+              frontend technologies, designed for seamless user interaction.
+            </p>
+            <a
+              href="https://github.com/Mutararw"
+              style="color: var(--accent-red)"
+              >VIEW ON GITHUB →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="text-align: center">
+        <h2
+          style="
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 3rem;
+            letter-spacing: -1px;
+          "
+        >
+          LET'S BUILD TOGETHER.
+        </h2>
+
+        <div class="contact-box">
+          <form>
+            <div>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">SEND MESSAGE</button>
+          </form>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/kajyojyi-ntwari-david-31a8422b7"
+            class="fa-brands fa-linkedin"
+            target="_blank"
+            title="LinkedIn"
+          ></a>
+          <a
+            href="https://github.com/Mutararw"
+            class="fa-brands fa-github"
+            target="_blank"
+            title="GitHub"
+          ></a>
+          <a
+            href="https://leetcode.com/u/Ntwari-David/"
+            target="_blank"
+            title="LeetCode"
+            style="
+              font-size: 1.8rem;
+              transition: 0.4s;
+              color: var(--text-muted);
+            "
+          >
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="#" class="fa-brands fa-x-twitter" target="_blank"></a>
+          <a href="#" class="fa-brands fa-instagram" target="_blank"></a>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; <span id="year"></span> David Kajyojyi Ntwari. Engineered for
+          Impact.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const translations = {
+        en: {
+          nav_about: "about",
+          nav_skills: "skills",
+          nav_career: "career",
+          nav_contact: "contact",
+          about_title:
+            "I build technology with precision and STEM-driven logic.",
+          contact_title: "LET'S BUILD THE FUTURE.",
+          btn_send: "Send Message",
+        },
+        kn: {
+          nav_about: "ibijyanye",
+          nav_skills: "ubumenyi",
+          nav_career: "umwuga",
+          nav_contact: "twandikire",
+          about_title: "Nubaka ikoranabuhanga nitonze kandi mbihereye mu mizi.",
+          contact_title: "TWUBAKE EJO HAZAZA.",
+          btn_send: "Ohereza",
+        },
+        fr: {
+          nav_about: "à propos",
+          nav_skills: "compétences",
+          nav_career: "carrière",
+          nav_contact: "contact",
+          about_title:
+            "Construire la technologie avec précision et logique STEM.",
+          contact_title: "CONSTRUISONS L'AVENIR.",
+          btn_send: "Envoyer",
+        },
+      };
+
+      function setLanguage(l) {
+        document.querySelectorAll("[data-translate]").forEach((el) => {
+          const key = el.getAttribute("data-translate");
+          if (translations[l] && translations[l][key])
+            el.textContent = translations[l][key];
+        });
+      }
+
+      document.getElementById("btn-en").onclick = (e) => {
+        e.preventDefault();
+        setLanguage("en");
+      };
+      document.getElementById("btn-kn").onclick = (e) => {
+        e.preventDefault();
+        setLanguage("kn");
+      };
+      document.getElementById("btn-fr").onclick = (e) => {
+        e.preventDefault();
+        setLanguage("fr");
+      };
+
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.onclick = () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const target = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", target);
+        themeToggle.textContent = target === "dark" ? "🌙" : "☀️";
+
+        // Adjust canvas visibility if needed
+        canvas.style.opacity = target === "dark" ? "1" : "0.2";
+      };
+
+      async function updateCounter() {
+        try {
+          const res = await fetch(
+            "https://api.counterapi.dev/v1/david-ntwari-portfolio/visits/increment",
+          );
+          const data = await res.json();
+          document.getElementById("v-count").textContent =
+            data.count.toLocaleString();
+        } catch (e) {}
+      }
+      updateCounter();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document.querySelectorAll("section").forEach((s) => {
+        s.style.opacity = "0";
+        s.style.transform = "translateY(40px)";
+        s.style.transition = "0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        observer.observe(s);
+      });
+
+      // Advanced Starry Background Logic
+      const canvas = document.getElementById("starCanvas");
+      const ctx = canvas.getContext("2d");
+      let width, height, stars;
+      const STAR_COUNT = 400;
+      const BLUE_SHADES = [
+        "#87CEEB",
+        "#00BFFF",
+        "#1E90FF",
+        "#ADD8E6",
+        "#B0E0E6",
+      ];
+
+      class Star {
+        constructor() {
+          this.init();
+        }
+        init() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.size = Math.random() * 1.5 + 0.5;
+          this.baseOpacity = Math.random() * 0.7 + 0.3;
+          this.opacity = this.baseOpacity;
+          this.color =
+            BLUE_SHADES[Math.floor(Math.random() * BLUE_SHADES.length)];
+          this.speedX = (Math.random() - 0.5) * (this.size * 0.1);
+          this.speedY = (Math.random() - 0.5) * (this.size * 0.1);
+          this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+          this.twinkleDir = 1;
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0) this.x = width;
+          if (this.x > width) this.x = 0;
+          if (this.y < 0) this.y = height;
+          if (this.y > height) this.y = 0;
+          this.opacity += this.twinkleSpeed * this.twinkleDir;
+          if (this.opacity > 1 || this.opacity < 0.2) this.twinkleDir *= -1;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = this.opacity;
+          ctx.fill();
+        }
+      }
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        stars = [];
+        for (let i = 0; i < STAR_COUNT; i++) stars.push(new Star());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        stars.forEach((star) => {
+          star.update();
+          star.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+      animate();
+    </script>
+  </body>
+</html>
